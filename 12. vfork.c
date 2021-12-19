@@ -33,3 +33,11 @@ int main()
   printf("PID(%d): parent a = %d, i = %d\n", getpid(), a, i);
   return 0;
 }
+
+/*
+reult:
+PID(): parent a = 0, i = 10
+PID(): Child a = 1, i = 11
+PID(): parent a = 1, i = 11
+PID(): a = 1, i = 11
+*/
