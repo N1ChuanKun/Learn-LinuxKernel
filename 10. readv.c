@@ -19,19 +19,18 @@ int main()
   }
   
   iov[0].iov_base = love;
-  iov[0].iov_len = sizeof(love);
+  iov[0].iov_len = sizeof(love) - 1;
   iov[1].iov_base = hello;
-  iov[1].iov_len = sizeof(hello);
+  iov[1].iov_len = sizeof(hello) - 1;
   iov[2].iov_base = test;
-  iov[2].iov_len = sizeof(test);
+  iov[2].iov_len = sizeof(test) - 1;
   
   nr = readv(fd, iov, 3);
   
-  printf("read %ld bytes.\n", nr);
-  for(i = 0; i < 3; i++)
-  {
-    printf("%d: %s\n", i, (char*)iov[i].iov_base);
-  }
+  printf("read: %ld bytes.\n", nr);
+  printf("%s\n", love);
+  pirntf("%s\n", hello);
+  printf("%s\n", test);
   
   return 0;
 }
