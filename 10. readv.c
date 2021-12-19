@@ -6,7 +6,7 @@
 
 int main()
 {
-  char love[12] = {0}, hello[13] = {0}, test[13] = 0;
+  char love[12] = {0}, hello[13] = {0}, test[13] = {0};
   struct iovec iov[3];
   ssize_t nr;
   int fd, i;
