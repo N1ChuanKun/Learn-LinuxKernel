@@ -5,6 +5,7 @@
 int main() {
 	int i, status, pid;
 	for (i = 0; i < MAX; i++) {
+		status = fork();
 		if (status == 0 || status == -1) { 
 			break; 
 			//如果是子进程就跳出来，保证只有父进程创建子进程
